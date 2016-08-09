@@ -41,15 +41,12 @@
     </div>
   <div class="row">
 
-  {% for sketchbook in sketchbooks %}
+  {% for upload_sketchbook in uploads_sketchbooks %}
     <div class="crop col-md-6 portfolio-item">
           <a href="#" class="thumbnail">
-            <img class="img-responsive" src="#" alt="">
+            <img class="img-responsive" src="{{upload_sketchbook.image.url}}" alt=""/>
           </a>
-          <h2><a href="{% url 'sketchbook_detail' slug=sketchbook.slug %}">
-            {{sketchbook.name}}
-          </a></h2>
-          <p>{{sketchbook.description}}</p>
+
 
 
     </div>

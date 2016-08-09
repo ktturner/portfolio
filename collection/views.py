@@ -2,21 +2,27 @@ from django.shortcuts import render
 from collection.models import Pattern
 from collection.models import Illustration
 from collection.models import Sketchbook
+from collection.models import UploadPattern
+from collection.models import UploadIllustration
+from collection.models import UploadSketchbook
 
 def index(request):
     return render(request, 'index.html')
 
 def pattern(request):
     patterns = Pattern.objects.all()
-    return render(request, 'pattern.html', {'patterns' : patterns,})
+    uploads_patterns = UploadPattern.objects.all()
+    return render(request, 'pattern.html', {'patterns' : patterns, 'uploads_patterns': uploads_patterns, })
 
 def illustration(request):
     illustrations = Illustration.objects.all()
-    return render(request, 'illustration.html', {'illustrations' : illustrations,})
+    uploads_illustrations = UploadIllustration.objects.all()
+    return render(request, 'illustration.html', {'illustrations' : illustrations, 'uploads_illustrations': uploads_illustrations, })
 
 def sketchbook(request):
     sketchbooks = Sketchbook.objects.all()
-    return render(request, 'sketchbook.html', {'sketchbooks' : sketchbooks,})
+    uploads_sketchbooks = UploadSketchbook.objects.all()
+    return render(request, 'sketchbook.html', {'sketchbooks' : sketchbooks, 'uploads_sketchbooks': uploads_sketchbooks,})
 
 def pattern_detail(request, slug):
     pattern = Pattern.objects.get(slug=slug)

@@ -41,18 +41,16 @@
     </div>
   <div class="row">
 
-  {% for pattern in patterns %}
-    <div class="crop col-md-6 portfolio-item">
-          <a href="#" class="thumbnail">
-            <img class="img-responsive" src="#" alt="">
-          </a>
-          <h3><a href="{% url 'pattern_detail' slug=pattern.slug %}">{{pattern.name}}
-          </a></h3>
-          <p>{{pattern.description}}</p>
+    {% for upload_pattern in uploads_patterns %}
+      <div class="crop col-md-6 portfolio-item">
+            <a href="#" class="thumbnail">
+              <img class="img-responsive" src="{{upload_pattern.image.url}}" alt=""/>
+            </a>
 
 
-    </div>
-  {% endfor %}
+
+      </div>
+    {% endfor %}
 
   </div>
 

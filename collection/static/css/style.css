@@ -16,12 +16,28 @@
 
 h1 {
   font-family: Besom;
+  color: #2F4F4F;
 }
+
+h2 > a, h3 > a
+  {
+    font-family: SUNN;
+    color: #708090
+  }
 
 p {
   font-family: SUNN;
+  color: #708090
 }
 
 .about {
   font-size: 40px;
 }
+
+.navbar .nav > li > a {
+    float: none;
+    line-height: 19px;
+    padding: 9px 10px 11px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color:  #4B0082;
