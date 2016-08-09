@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Patterns - {{block.super}}
+{% endblock title %}
+
+
+
+  <!-- Page Content -->
+
+<!-- Page Header -->
+
+    <!--        <h1 class="page-header">Gallery of Work</h1> -->
+
+      <!-- /.row -->
+
+  <!-- Projects Row -->
+
+<!--  <div class="row">
+      <div class="crop col-md-6 portfolio-item">-->
+      <!--    <h2>
+              <a href="{% url 'item_detail' slug=item.slug %}">
+                {{ item.name }}"></a>
+          </h2>
+          <p>{{ item.description }}</p>-->
+    <!--  </div>
+  </div>-->
+
+
+
+
+
+{% block content %}
+<div class="container">
+
+      <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Patterns</h1>
+        </div>
+    </div>
+  <div class="row">
+
+  {% for pattern in patterns %}
+    <div class="crop col-md-6 portfolio-item">
+          <a href="#" class="thumbnail">
+            <img class="img-responsive" src="#" alt="">
+          </a>
+          <h3>
+              {{pattern.name}}
+              <!--<a href="#">{{pattern.name}}</a>-->
+          </h3>
+          <p>{{pattern.description}}</p>
+
+
+    </div>
+  {% endfor %}
+
+  </div>
+
+{% endblock content %}
+</div>

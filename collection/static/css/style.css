@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'KingBasil';
+    src: url('/fonts/King-Basil-Lite.otf');
+
+}
+
+@font-face {
+  font-family: 'SUNN';
+  src: url('/fonts/SUNN.otf');
+}
+
+@font-face {
+  font-family: 'Besom';
+  src: url('/fonts/Besom-free-font.ttf')
+}
+
+h1 {
+  font-family: Besom;
+}
+
+p {
+  font-family: SUNN;
+}
+
+.about {
+  font-size: 40px;
+}
