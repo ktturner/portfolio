@@ -23,8 +23,13 @@ urlpatterns = [
     url(r'^$', views.index, name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
     url(r'^pattern/$', views.pattern, name='patterns'),
+    url(r'^patterns/(?P<slug>[-\w]+)/$', views.pattern_detail, name="pattern_detail"),
     url(r'^illustration/$', views.illustration, name='illustrations'),
+
+    url(r'^illustrations/(?P<slug>[-\w]+)/$', views.illustration_detail, name='illustration_detail'),
+
     url(r'^sketchbook/$', views.sketchbook, name='sketchbooks'),
+    url(r'^sketchbooks/(?P<slug>[-\w]+)/$', views.sketchbook_detail, name="sketchbook_detail"),
     url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
     url(r'^admin/', admin.site.urls),
 ]

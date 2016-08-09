@@ -17,3 +17,15 @@ def illustration(request):
 def sketchbook(request):
     sketchbooks = Sketchbook.objects.all()
     return render(request, 'sketchbook.html', {'sketchbooks' : sketchbooks,})
+
+def pattern_detail(request, slug):
+    pattern = Pattern.objects.get(slug=slug)
+    return render(request, 'patterns/pattern_detail.html', {'pattern':pattern,})
+
+def illustration_detail(request, slug):
+    illustration = Illustration.objects.get(slug=slug)
+    return render(request, 'illustrations/illustration_detail.html', {'illustration': illustration,})
+
+def sketchbook_detail(request, slug):
+    sketchbook = Sketchbook.objects.get(slug=slug)
+    return render(request, 'sketchbooks/sketchbook_detail.html', {'sketchbook':sketchbook,})

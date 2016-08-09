@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ sketchbook.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1>{{sketchbook.name}}</h1>
+  <p>{{sketchbook.description}}</p>
+{% endblock content %}

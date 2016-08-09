@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ pattern.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1>{{pattern.name}}</h1>
+  <p>{{pattern.description}}</p>
+{% endblock content %}

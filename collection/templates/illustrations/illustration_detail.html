@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ illustration.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1>{{illustration.name}}</h1>
+  <p>{{illustration.description}}</p>
+{% endblock content %}

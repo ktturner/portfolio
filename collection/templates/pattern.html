@@ -46,10 +46,8 @@
           <a href="#" class="thumbnail">
             <img class="img-responsive" src="#" alt="">
           </a>
-          <h3>
-              {{pattern.name}}
-              <!--<a href="#">{{pattern.name}}</a>-->
-          </h3>
+          <h3><a href="{% url 'pattern_detail' slug=pattern.slug %}">{{pattern.name}}
+          </a></h3>
           <p>{{pattern.description}}</p>
 
 

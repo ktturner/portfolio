@@ -46,10 +46,9 @@
           <a href="#" class="thumbnail">
             <img class="img-responsive" src="#" alt="">
           </a>
-          <h3>
-              {{sketchbook.name}}
-              <!--<a href="#">{{pattern.name}}</a>-->
-          </h3>
+          <h2><a href="{% url 'sketchbook_detail' slug=sketchbook.slug %}">
+            {{sketchbook.name}}
+          </a></h2>
           <p>{{sketchbook.description}}</p>
 
 
