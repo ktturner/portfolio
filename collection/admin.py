@@ -1,5 +1,5 @@
 from django.contrib import admin
-from collection.models import Pattern, Illustration, Sketchbook
+from collection.models import Pattern, Illustration, Sketchbook, UploadPattern, UploadIllustration, UploadSketchbook
 
 class PatternAdmin(admin.ModelAdmin):
     model = Pattern
@@ -21,3 +21,21 @@ class SketchbookAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('name',)}
 
 admin.site.register(Sketchbook, SketchbookAdmin)
+
+class UploadPatternAdmin(admin.ModelAdmin):
+    list_display = ('pattern', )
+    list_display_links = ('pattern', )
+
+admin.site.register(UploadPattern, UploadPatternAdmin)
+
+class UploadIllustrationAdmin(admin.ModelAdmin):
+    list_display = ('illustration', )
+    list_display_links = ('illustration', )
+
+admin.site.register(UploadIllustration, UploadIllustrationAdmin)
+
+class UploadSketchbookAdmin(admin.ModelAdmin):
+    list_display = ('sketchbook', )
+    list_display_links = ('sketchbook', )
+
+admin.site.register(UploadSketchbook, UploadSketchbookAdmin)
