@@ -15,7 +15,8 @@
 }
 
 h1 {
-  font-family: Besom;
+  font-family: SUNN;
+  font-weight: bold;
   color: #2F4F4F;
 }
 
@@ -41,3 +42,35 @@ p {
     text-decoration: none;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     color:  #4B0082;
+}
+
+
+
+.controls{
+    width:50px;
+    display:block;
+    font-size:11px;
+    padding-top:8px;
+    font-weight:bold;
+}
+.next {
+    float:right;
+    text-align:right;
+}
+
+.previous {
+  float: left;
+  text-align: left;
+}
+
+ul {
+  padding:0 0 0 0;
+  margin:0 0 0 0;
+}
+ul li {
+  list-style:none;
+  margin-bottom:25px;
+}
+ul li img {
+  cursor: pointer;
+}

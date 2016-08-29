@@ -22,6 +22,9 @@
     <link href="{% static 'css/2-col-portfolio.css' %}" rel="stylesheet">
     <link href="{% static 'css/home.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+
   {% block header %}{% endblock header %}
 </head>
 {% block additional_styles %}
@@ -68,11 +71,30 @@
 
 
   {% block content %}{% endblock content %}
-  {% block footer %}{% endblock footer %}
-  <div class="mastfoot">
+<div class="mastfoot">
     <div class="inner">
       <p>Copyright &copy; Katie McCoy Turner 2016</p>
     </div>
   </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+   $('li img').on('click',function(){
+        var src = $(this).attr('src');
+        var img = '<img src="' + src + '" class="img-responsive"/>';
+        $('#myModal').modal();
+        $('#myModal').on('shown.bs.modal', function(){
+            $('#myModal .modal-body').html(img);
+        });
+        $('#myModal').on('hidden.bs.modal', function(){
+            $('#myModal .modal-body').html('');
+        });
+   });
+});
+
+
+</script>
 </body>
 </html>

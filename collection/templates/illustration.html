@@ -41,13 +41,16 @@
     </div>
   <div class="row">
 
-  {% for upload_illustration in uploads_illustrations %}
-    <div class="crop col-md-6 portfolio-item">
-          <a href="#" class="thumbnail">
-            <img class="img-responsive" src="{{upload_illustration.image.url}}" alt=""/>
-          </a>
-        
-  {% endfor %}
+    {% for upload_illustration in uploads_illustrations %}
+      <div class="crop col-md-6 portfolio-item">
+            <a href="#" class="thumbnail">
+              <img class="img-responsive" src="{{upload_illustration.image.url}}" alt=""/>
+            </a>
+
+
+
+      </div>
+    {% endfor %}
 
   </div>
 

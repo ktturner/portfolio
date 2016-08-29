@@ -4,55 +4,32 @@
   Patterns - {{block.super}}
 {% endblock title %}
 
-
-
-  <!-- Page Content -->
-
-<!-- Page Header -->
-
-    <!--        <h1 class="page-header">Gallery of Work</h1> -->
-
-      <!-- /.row -->
-
-  <!-- Projects Row -->
-
-<!--  <div class="row">
-      <div class="crop col-md-6 portfolio-item">-->
-      <!--    <h2>
-              <a href="{% url 'item_detail' slug=item.slug %}">
-                {{ item.name }}"></a>
-          </h2>
-          <p>{{ item.description }}</p>-->
-    <!--  </div>
-  </div>-->
-
-
-
-
-
 {% block content %}
-<div class="container">
-
-      <!-- Page Header -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Patterns</h1>
-        </div>
+  <div class="container">
+    <div class="col-lg-12">
+        <h1 class="page-header">Patterns</h1>
     </div>
-  <div class="row">
-
+    <ul class="row">
     {% for upload_pattern in uploads_patterns %}
-      <div class="crop col-md-6 portfolio-item">
-            <a href="#" class="thumbnail">
-              <img class="img-responsive" src="{{upload_pattern.image.url}}" alt=""/>
-            </a>
-
-
-
-      </div>
+    <div class="crop col-md-6 portfolio-item">
+          <li><a href="#" class="thumbnail" >
+            <img class="img-responsive myImg" src="{{upload_pattern.image.url}}" alt=""/>
+          </a></li>
+    </div>
     {% endfor %}
-
+    </ul>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
   </div>
 
+
+
+
 {% endblock content %}
+
 </div>
