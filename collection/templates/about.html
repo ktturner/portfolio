@@ -6,7 +6,7 @@
 
 {% block content %}
 <header class="header-image">
-        <div class="container">
+        <div class="container abouttext">
             <h1>About the Artist</h1>
             <!--<h2>Katie McCoy Turner</h2>-->
         </div>
@@ -16,46 +16,31 @@
 <!-- Page Content -->
 <div class="container">
 
-    <hr class="featurette-divider">
+
 
     <!-- First Featurette -->
-    <div class="featurette" id="about">
-        <img class="featurette-image img-square img-responsive pull-right" src="{% static "css/images/katie.jpg" %}" width = "500" height = "500" alt=""/>
+    <div class="featurette">
+        <img class="featurette-image img-square img-responsive pull-right aboutimg" src="{% static "css/images/katie.jpg" %}" width = "400" height = "600" alt=""/>
             <span class="text-muted"></span>
 
-        <p class="about">Hi, I am Katie. I live in Durham, North Carolina with my husband and our two dogs. I love texture, color, and patterns. I work with water colors, gouache, and block printing to create the style I want. I am constantly learning and exploring new techniques, mediums and different art forms. My life ambition is to never stop creating and growing.
+        <p class="abouttext">Hi, I am Katie. I live in Durham, North Carolina with my husband and our two dogs. I love texture, color, and patterns. I work with water colors, gouache, and block printing to create the style I want. I am constantly learning and exploring new techniques, mediums and different art forms. My life ambition is to never stop creating and growing.
 </p>
     </div>
 
-    <hr class="featurette-divider">
 
-    <!-- Second Featurette -->
-    <!--<div class="featurette" id="services">
-        <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
-        <h2 class="featurette-heading">The Second Heading
-            <span class="text-muted">Is Pretty Cool Too.</span>
-        </h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
 
-    <hr class="featurette-divider">-->
-
-    <!-- Third Featurette -->
-    <!--<div class="featurette" id="contact">
-        <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-        <h2 class="featurette-heading">The Third Heading
-            <span class="text-muted">Will Seal the Deal.</span>
-        </h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-
-    <hr class="featurette-divider">-->
-
-    <!-- Footer -->
     <footer>
         <div class="row">
             <div class="col-lg-12">
                 <p>Copyright &copy; Katie McCoy Turner 2016</p>
+                <style>.ig-b- { display: inline-block; }
+                .ig-b- img { visibility: hidden; }
+                .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+                .ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+                @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+                .ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }</style>
+                <a href="https://www.instagram.com/katiemccoyturner/?ref=badge" class="ig-b- ig-b-32"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
+                </a>
             </div>
         </div>
     </footer>

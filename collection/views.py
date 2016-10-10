@@ -5,6 +5,7 @@ from collection.models import Sketchbook
 from collection.models import UploadPattern
 from collection.models import UploadIllustration
 from collection.models import UploadSketchbook
+from collection.forms import ContactForm
 
 def index(request):
     return render(request, 'index.html')
@@ -35,3 +36,9 @@ def illustration_detail(request, slug):
 def sketchbook_detail(request, slug):
     sketchbook = Sketchbook.objects.get(slug=slug)
     return render(request, 'sketchbooks/sketchbook_detail.html', {'sketchbook':sketchbook,})
+
+def contact(request):
+    print "inside contact"
+    form_class = ContactForm
+    print "adding contact views"
+    return render(request, 'contact.html', {'form': form_class,})

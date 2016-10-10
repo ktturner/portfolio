@@ -1,44 +1,45 @@
-@font-face {
-    font-family: 'KingBasil';
-    src: url('/fonts/King-Basil-Lite.otf');
 
-}
-
-@font-face {
-  font-family: 'SUNN';
-  src: url('/fonts/SUNN.otf');
-}
-
-@font-face {
-  font-family: 'Besom';
-  src: url('/fonts/Besom-free-font.ttf')
-}
 
 h1 {
-  font-family: SUNN;
-  font-weight: bold;
-  color: #2F4F4F;
+  font-family: 'Amatic SC', cursive;
+  <!--font-weight: bold;-->
+  color: #4B0082;
 }
 
 h2 > a, h3 > a
   {
-    font-family: SUNN;
-    color: #708090
+    font-family: 'Amatic SC', cursive;
+    color: #4B0082
   }
 
 p {
-  font-family: SUNN;
-  color: #708090
+  font-family: 'Amatic SC', cursive;
+  color: #4B0082
 }
 
-.about {
-  font-size: 40px;
+.abouttext {
+  font-size: 30px;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 75px;
+  text-align: justify;
+  margin: 25px;
+}
+
+.aboutimg {
+  padding-left: 50px;
+}
+
+.wid {
+-moz-column-width: 100px;
+-webkit-column-width: 100px;
+column-width: 100px;
 }
 
 .navbar .nav > li > a {
     float: none;
     line-height: 19px;
-    padding: 9px 10px 11px;
+    padding: 3px 3px 3px;
     text-decoration: none;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     color:  #4B0082;
@@ -66,11 +67,36 @@ p {
 ul {
   padding:0 0 0 0;
   margin:0 0 0 0;
+  white-space: nowrap;
+  width: 900 px;
+  overflow-x: auto;
+
 }
 ul li {
   list-style:none;
   margin-bottom:25px;
+  display: inline;
+  width: 150px
+  height: 150px;
 }
 ul li img {
   cursor: pointer;
+
+}
+
+ul.gallery {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    width: 900px;
+    overflow-x: auto;
+    background-color: #ddd;
+  }
+  ul.gallery li {
+    display: inline;
+    width: 150px;
+    height: 150px;
+  }
+
+#contactform input {
 }

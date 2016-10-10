@@ -29,7 +29,8 @@ urlpatterns = [
     url(r'^illustrations/(?P<slug>[-\w]+)/$', views.illustration_detail, name='illustration_detail'),
     url(r'^sketchbook/$', views.sketchbook, name='sketchbooks'),
     url(r'^sketchbooks/(?P<slug>[-\w]+)/$', views.sketchbook_detail, name="sketchbook_detail"),
-    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    url(r'^shop/$', TemplateView.as_view(template_name='shop.html'), name='shop'),
+    url(r'^contact/$', views.contact, name='contact'),
     url(r'^admin/', admin.site.urls),
 ]
 
